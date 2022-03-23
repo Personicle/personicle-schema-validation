@@ -1,9 +1,11 @@
+import ssl
 from flask import Flask, Response, jsonify, request
 import logging
 import os
 from fastavro import validate, parse_schema
 import json
 from data_dictionary import find_datastream, find_event_definition
+from config import DATA_DICTIONARY_SERVER_SETTINGS
 
 # Log_Format = "%(levelname)s %(asctime)s - %(message)s"
 # logging.basicConfig(filename = "data_dictionary.log",
@@ -59,7 +61,7 @@ def validate_data_packet():
         else:
             return jsonify({"schema_check": False})
     except KeyError:
-        return Response("Incorrect packet format", 403)
+        return Response("Incorrect packet format", 422)
 
 
 @app.route("/match-data-dictionary")
@@ -83,4 +85,4 @@ def match_data_dictionary():
 
 if __name__ == "__main__":
     os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
-    app.run("localhost", port=5000, debug=True)
+    app.run(DATA_DICTIONARY_SERVER_SETTINGS['HOST_URL'], port=DATA_DICTIONARY_SERVER_SETTINGS['HOST_PORT'], debug=True, ssl_context='adhoc')
