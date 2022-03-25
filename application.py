@@ -1,4 +1,3 @@
-import ssl
 from flask import Flask, Response, jsonify, request
 import logging
 import os
@@ -33,11 +32,12 @@ def validate_data_packet():
     try:
         # logger.info("Received data packet for data type {}:\n{}".format(data_type, json.dumps(current_event, indent=2)))
 
-        stream_type = current_event['streamName']
+        stream_type = current_event.get('streamName', None)
         
         # match the stream name to the data dictionary
         if data_type == "event":
-            stream_information = find_event_definition(stream_type)
+            # stream_information = find_event_definition(stream_type)
+            stream_information = {"base_schema": "event_schema.avsc"}
         elif data_type == "datastream":
             stream_information = find_datastream(stream_type)
         else:
@@ -54,13 +54,15 @@ def validate_data_packet():
             schema = json.load(fi)
         
         # validate the event with avro schema
+        print("Matching with schema: {}".format(schema))
         parsed_schema = parse_schema(schema) 
         if validate(current_event, parsed_schema, raise_errors=False):
             # logger.info("Valid event")
             return jsonify({"schema_check": True})
         else:
             return jsonify({"schema_check": False})
-    except KeyError:
+    except KeyError as e:
+        print(e)
         return Response("Incorrect packet format", 422)
 
 
