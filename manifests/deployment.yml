@@ -44,6 +44,11 @@ spec:
             secretKeyRef:
               name: dbsecret
               key: AUTH_ENDPOINT
+        - name: INGESTION_PROD
+          valueFrom:
+            secretKeyRef:
+              name: dbsecret
+              key: INGESTION_PROD
 ---
 apiVersion: v1
 kind: Service
