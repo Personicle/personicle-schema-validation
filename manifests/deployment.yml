@@ -49,6 +49,11 @@ spec:
             secretKeyRef:
               name: dbsecret
               key: INGESTION_PROD
+        - name: DATA_DICTIONARY_PORT
+          valueFrom:
+            secretKeyRef:
+              name: dbsecret
+              key: DATA_DICTIONARY_PORT
 ---
 apiVersion: v1
 kind: Service
