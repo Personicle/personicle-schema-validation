@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: personicle-write-service
+  name: personicle-schema-validation
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: personicle-write-service
+      app: personicle-schema-validation
   template:
     metadata:
       labels:
-        app: personicle-write-service
+        app: personicle-schema-validation
     spec:
       containers:
-      - name: personicle-write-service
-        image: personicleauth.azurecr.io/personicle-write-service
+      - name: personicle-schema-validation
+        image: personicleauth.azurecr.io/personicle-schema-validation
         imagePullPolicy: Always
         ports:
         - containerPort: 5002
@@ -58,12 +58,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: personicle-write-service
+  name: personicle-schema-validation
 spec:
   ports:
   - port: 5002
-    name: write-service
+    name: schema-validation
     protocol: TCP
     targetPort: 5002
   selector:
-    app: personicle-write-service
+    app: personicle-schema-validation
