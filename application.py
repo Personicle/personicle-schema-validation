@@ -87,4 +87,5 @@ def match_data_dictionary():
 
 if __name__ == "__main__":
     os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
-    app.run(DATA_DICTIONARY_SERVER_SETTINGS['HOST_URL'], port=DATA_DICTIONARY_SERVER_SETTINGS['HOST_PORT'], debug=True, ssl_context='adhoc')
+#     app.run(DATA_DICTIONARY_SERVER_SETTINGS['HOST_URL'], port=DATA_DICTIONARY_SERVER_SETTINGS['HOST_PORT'], debug=True, ssl_context='adhoc')
+    app.run(port=5002)
