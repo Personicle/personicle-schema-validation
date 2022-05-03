@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "akspersonicledev-ed9c"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "akspersonicledev-ed9c"
+  template:
+    metadata:
+      labels:
+        app: "akspersonicledev-ed9c"
+    spec:
+      containers:
+        - name: "akspersonicledev-ed9c"
+          image: "personicleservices.azurecr.io/akspersonicledev"
+          ports:
+          - containerPort: 80
