@@ -30,7 +30,7 @@ def validate_data_packet():
     current_event = request.get_json()
     # current_event = event.body_as_json(encoding='UTF-8')
     try:
-        # logger.info("Received data packet for data type {}:\n{}".format(data_type, json.dumps(current_event, indent=2)))
+        logging.info("Received data packet for data type {}:\n{}".format(data_type, json.dumps(current_event, indent=2)))
 
         stream_type = current_event.get('streamName', None)
         
@@ -66,7 +66,7 @@ def validate_data_packet():
         return Response("Incorrect packet format", 422)
 
 
-@app.route("/match-data-dictionary")
+@app.route("/match-data-dictionary", methods=["GET","POST"])
 def match_data_dictionary():
     data_type = request.args.get("data_type")
     print("data type is {}".format(data_type))
