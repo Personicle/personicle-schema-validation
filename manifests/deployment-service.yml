@@ -17,7 +17,7 @@ spec:
         image: personicleservices.azurecr.io/personicle-schema-validation
         imagePullPolicy: Always
         ports:
-        - containerPort: 5002
+        - containerPort: 5001
         env:
         - name: INGESTION_PROD
           valueFrom:
@@ -42,9 +42,9 @@ metadata:
   name: personicle-schema-validation-service
 spec:
   ports:
-  - port: 5002
+  - port: 5001
     name: http2
     protocol: TCP
-    targetPort: 5002
+    targetPort: 5001
   selector:
     app: personicle-schema-validation-service
