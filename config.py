@@ -27,5 +27,5 @@ else:
     print("in the prod environment")
     DATA_DICTIONARY_SERVER_SETTINGS = {
         'HOST_URL': os.environ.get('DATA_DICTIONARY_HOST', "0.0.0.0"),
-        'HOST_PORT': os.environ.get('DATA_DICTIONARY_PORT', 5002)
+        'HOST_PORT': os.environ.get('DATA_DICTIONARY_PORT', 5001)
     }
