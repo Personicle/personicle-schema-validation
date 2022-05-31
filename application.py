@@ -56,10 +56,16 @@ def validate_data_packet():
         # validate the event with avro schema
         print("Matching with schema: {}".format(schema))
         parsed_schema = parse_schema(schema) 
-        if validate(current_event, parsed_schema, raise_errors=False):
-            # logger.info("Valid event")
-            return jsonify({"schema_check": True})
-        else:
+        try:
+            if validate(current_event, parsed_schema, raise_errors=True):
+                # logger.info("Valid event")
+                return jsonify({"schema_check": True})
+            else:
+                logging.info("Packet not formatted correctly {}".format(current_event))
+                return jsonify({"schema_check": False})
+        except Exception as e:
+            logging.info("{}".format(current_event))
+            logging.error("Exception while validating packet: {}".format(e))
             return jsonify({"schema_check": False})
     except KeyError as e:
         print(e)
