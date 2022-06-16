@@ -104,6 +104,13 @@
                     "TableName": "step_count",
                     "base_schema": "integer_datastream_schema.avsc"
                 },
+                
+                "com.personicle.individual.datastreams.interval.step.count": {
+                    "ValueType": "Integer",
+                    "Unit": "stepsperminute",
+                    "TableName": "interval_step_count",
+                    "base_schema": "integer_interval_datastream_schema.avsc"
+                },
                 "com.personicle.individual.datastreams.body_fat": {
                     "ValueType": "Numeric",
                     "Unit": "percentage",
