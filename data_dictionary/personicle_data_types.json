@@ -32,11 +32,23 @@
                     "TableName": "heart_intensity_minutes",
                     "base_schema": "numeric_datastream_schema.avsc"
                 },
+                "com.personicle.individual.datastreams.interval.heart_intensity_minutes": {
+                    "ValueType": "Numeric",
+                    "Unit": "minutes",
+                    "TableName": "interval_heart_intensity_minutes",
+                    "base_schema": "numeric_interval_datastream_schema.avsc"
+                },
                 "com.personicle.individual.datastreams.active_minutes": {
                     "ValueType": "Numeric",
                     "Unit": "minutes",
                     "TableName": "active_minutes",
                     "base_schema": "numeric_datastream_schema.avsc"
+                },
+                "com.personicle.individual.datastreams.interval.active_minutes": {
+                    "ValueType": "Numeric",
+                    "Unit": "minutes",
+                    "TableName": "interval_active_minutes",
+                    "base_schema": "numeric_interval_datastream_schema.avsc"
                 },
                 "com.personicle.individual.datastreams.step.cumulative": {
                     "ValueType": "Integer",
@@ -62,11 +74,23 @@
                     "TableName": "calories_total",
                     "base_schema": "numeric_datastream_schema.avsc"
                 },
+                "com.personicle.individual.datastreams.interval.total_calories": {
+                    "ValueType": "Numeric",
+                    "Unit": "kilo_calories",
+                    "TableName": "interval_calories_total",
+                    "base_schema": "numeric_interval_datastream_schema.avsc"
+                },
                 "com.personicle.individual.datastreams.distance": {
                     "ValueType": "Numeric",
                     "Unit": "meters",
                     "TableName": "distance",
                     "base_schema": "numeric_datastream_schema.avsc"
+                },
+                "com.personicle.individual.datastreams.interval.distance": {
+                    "ValueType": "Numeric",
+                    "Unit": "meters",
+                    "TableName": "interval_distance",
+                    "base_schema": "numeric_interval_datastream_schema.avsc"
                 },
                 "com.personicle.individual.datastreams.weight": {
                     "ValueType": "Numeric",
@@ -85,6 +109,12 @@
                     "Unit": "rpm",
                     "TableName": "cumulative_cycling_cadence",
                     "base_schema": "numeric_datastream_schema.avsc"
+                },
+                "com.personicle.individual.datastreams.interval.cycling.cumulative_cadence": {
+                    "ValueType": "Numeric",
+                    "Unit": "rpm",
+                    "TableName": "interval_cumulative_cycling_cadence",
+                    "base_schema": "numeric_interval_datastream_schema.avsc"
                 },
                 "com.personicle.individual.datastreams.cycling.power": {
                     "ValueType": "Numeric",
