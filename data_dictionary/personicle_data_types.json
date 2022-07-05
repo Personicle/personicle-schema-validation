@@ -188,6 +188,12 @@
                     "Unit": "Celsius",
                     "TableName": "body_temperature",
                     "base_schema": "numeric_datastream_schema.avsc"
+                },
+                "com.personicle.individual.datastreams.subjective.physician_questionnaire": {
+                    "ValueType": "Json",
+                    "Unit": "",
+                    "TableName": "physician_questionnaire",
+                    "base_schema": "json_object_datastream_schema.avsc"
                 }
 
             }
