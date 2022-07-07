@@ -194,7 +194,119 @@
                     "Unit": "",
                     "TableName": "physician_questionnaire",
                     "base_schema": "json_object_datastream_schema.avsc"
+                },
+
+                "com.personicle.individual.datastreams.exposome.aqi": {
+
+                    "ValueType": "Numeric",
+                    "Unit": "",
+                    "TableName": "exposome_aqi",
+                    "base_schema": "numeric_datastream_schema.avsc"
+                },
+                "com.personicle.individual.datastreams.exposome.co": {
+
+                    "ValueType": "Numeric",
+                    "Unit": "ug/cc",
+                    "TableName": "exposome_co",
+                    "base_schema": "numeric_datastream_schema.avsc"
+                },
+
+                "com.personicle.individual.datastreams.exposome.no": {
+
+                    "ValueType": "Numeric",
+                    "Unit": "ug/cc",
+                    "TableName": "exposome_no",
+                    "base_schema": "numeric_datastream_schema.avsc"
+                },
+
+                "com.personicle.individual.datastreams.exposome.no2": {
+
+                    "ValueType": "Numeric",
+                    "Unit": "ug/cc",
+                    "TableName": "exposome_no2",
+                    "base_schema": "numeric_datastream_schema.avsc"
+                },
+
+                 "com.personicle.individual.datastreams.exposome.03": {
+
+                    "ValueType": "Numeric",
+                    "Unit": "ug/cc",
+                    "TableName": "exposome_03",
+                    "base_schema": "numeric_datastream_schema.avsc"
+                },
+
+                "com.personicle.individual.datastreams.exposome.so2": {
+
+                    "ValueType": "Numeric",
+                    "Unit": "ug/cc",
+                    "TableName": "exposome_so2",
+                    "base_schema": "numeric_datastream_schema.avsc"
+                },
+
+                 "com.personicle.individual.datastreams.exposome.pm2_5": {
+
+                    "ValueType": "Numeric",
+                    "Unit": "ug/cc",
+                    "TableName": "exposome_pm2_5",
+                    "base_schema": "numeric_datastream_schema.avsc"
+                },
+
+                  "com.personicle.individual.datastreams.exposome.pm10": {
+
+                    "ValueType": "Numeric",
+                    "Unit": "ug/cc",
+                    "TableName": "exposome_pm10",
+                    "base_schema": "numeric_datastream_schema.avsc"
+                },
+
+                "com.personicle.individual.datastreams.exposome.nh3": {
+
+                    "ValueType": "Numeric",
+                    "Unit": "ug/cc",
+                    "TableName": "exposome_nh3",
+                    "base_schema": "numeric_datastream_schema.avsc"
+                },
+
+                   "com.personicle.individual.datastreams.exposome.temp": {
+
+                    "ValueType": "Numeric",
+                    "Unit": "C",
+                    "TableName": "exposome_temp",
+                    "base_schema": "numeric_datastream_schema.avsc"
+                },
+
+                 "com.personicle.individual.datastreams.exposome.feels_like": {
+
+                    "ValueType": "Numeric",
+                    "Unit": "C",
+                    "TableName": "exposome_feels_like",
+                    "base_schema": "numeric_datastream_schema.avsc"
+                },
+
+                "com.personicle.individual.datastreams.exposome.pressure": {
+
+                    "ValueType": "Numeric",
+                    "Unit": "hPa",
+                    "TableName": "exposome_pressure",
+                    "base_schema": "numeric_datastream_schema.avsc"
+                },
+
+                "com.personicle.individual.datastreams.exposome.humidity": {
+
+                    "ValueType": "Numeric",
+                    "Unit": "%",
+                    "TableName": "exposome_humidity",
+                    "base_schema": "numeric_datastream_schema.avsc"
+                },
+
+                 "com.personicle.individual.datastreams.exposome.uvi": {
+
+                    "ValueType": "Numeric",
+                    "Unit": "mwpscc",
+                    "TableName": "exposome_uvi",
+                    "base_schema": "numeric_datastream_schema.avsc"
                 }
+
 
             }
         }
