@@ -195,7 +195,12 @@
                     "TableName": "physician_questionnaire",
                     "base_schema": "json_object_datastream_schema.avsc"
                 },
-
+                "com.personicle.individual.datastreams.subjective.user_images": {
+                    "ValueType": "Json",
+                    "Unit": "",
+                    "TableName": "user_images",
+                    "base_schema": "json_object_datastream_schema.avsc"
+                },
                 "com.personicle.individual.datastreams.exposome.aqi": {
 
                     "ValueType": "Numeric",
