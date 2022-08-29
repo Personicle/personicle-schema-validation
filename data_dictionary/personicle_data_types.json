@@ -154,7 +154,7 @@
                     "base_schema": "numeric_datastream_schema.avsc"
                 },
                 "com.personicle.individual.datastreams.location": {
-                    "ValueType": "Object",
+                    "ValueType": "Json",
                     "Unit": "NA",
                     "TableName": "locations",
                     "base_schema": "location_datastream_schema.avsc"
