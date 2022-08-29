@@ -14,7 +14,7 @@
         {
           "name": "source",
           "type": "string"
-        }
+        },
         {
           "name": "dataPoints",
           "type": {
