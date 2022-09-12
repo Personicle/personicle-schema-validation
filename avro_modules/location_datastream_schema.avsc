@@ -29,23 +29,23 @@
                 },
                 {
                   "name": "value",
-                  "type":{
-                    "items": {
+                  "type": {
+                    "type": "array",
+                    "items":{
                       "name": "value_record",
                       "type": "record",
-                       "fields": [
-                            {
-                              "name": "latitude",
-                              "type": "double"
-                            },
-                            {
-                              "name": "longitude",
-                              "type": "double"
-                            }
-                    
-                        ]
+                      "fields":[
+                        {
+                          "name": "latitude",
+                          "type": "double"
+                        },
+                        {
+                          "name": "longitude",
+                          "type": "double"
+                        }
+                      ]
                     }
-                }
+                  }
                 }
               ]
             }
