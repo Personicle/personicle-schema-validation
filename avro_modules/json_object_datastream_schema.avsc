@@ -34,7 +34,6 @@
                 {
                   "name": "value",
                   "type": {
-                    "type": "array",
                     "items":{
                       "name": "value_record",
                       "type": "record",
