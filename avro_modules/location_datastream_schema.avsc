@@ -29,8 +29,6 @@
                 },
                 {
                   "name": "value",
-                  "type": {
-                    "type": "record",
                     "items":{
                       "name": "value_record",
                       "type": "record",
@@ -45,7 +43,6 @@
                         }
                       ]
                     }
-                  }
                 }
               ]
             }
