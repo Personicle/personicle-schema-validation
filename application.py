@@ -1,4 +1,5 @@
 from flask import Flask, Response, jsonify, request
+import traceback
 import logging
 import os
 from fastavro import validate, parse_schema
@@ -69,6 +70,7 @@ def validate_data_packet():
             return jsonify({"schema_check": False})
     except KeyError as e:
         print(e)
+        traceback.print_exc()
         return Response("Incorrect packet format", 422)
 
 
@@ -93,5 +95,5 @@ def match_data_dictionary():
 
 if __name__ == "__main__":
     os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
-    app.run(DATA_DICTIONARY_SERVER_SETTINGS['HOST_URL'], port=DATA_DICTIONARY_SERVER_SETTINGS['HOST_PORT'])
+    app.run(DATA_DICTIONARY_SERVER_SETTINGS['HOST_URL'], port=DATA_DICTIONARY_SERVER_SETTINGS['HOST_PORT'], debug=True)
     
