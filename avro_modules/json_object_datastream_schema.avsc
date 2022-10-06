@@ -1,58 +1,62 @@
 {
-    "name": "json_stream_message",
-    "namespace": "com.personicle.individual.datastreams.subjective.physician_questionnaire",
-    "type": "record",
-    "fields": [
-        {
-          "name": "streamName",
-          "type": "string"
-        },
-        {
-          "name": "individual_id",
-          "type": "string"
-        },
-        {
-          "name": "source",
-          "type": "string"
-        },
-        {
-          "name": "confidence",
-          "type": "int"
-        },
-        {
-          "name": "dataPoints",
-          "type": {
-            "type": "array",
-            "items": {
-              "name": "dataPoints_record",
+  "type": "record",
+  "name": "json_stream_message",
+  "namespace": "com.personicle.individual.datastreams.subjective.physician_questionnaire",
+  "fields": [
+    {
+      "name": "confidence",
+      "type": ["null", "int"],
+      "default": null
+  }, {
+      "name": "dataPoints",
+      "type": {
+          "type": "array",
+          "items": ["null", {
               "type": "record",
-              "fields": [
-                {
+              "name": "DataPoint",
+              "fields": [{
                   "name": "timestamp",
                   "type": "string"
-                },
-                {
+              }, {
                   "name": "value",
-                  "type": {
-                    "items":{
-                      "name": "value_record",
-                      "type": "record",
-                      "fields":[
-                        {
-                          "name": "question-id",
-                          "type": "string"
-                        },
-                        {
-                          "name": "value",
-                          "type": "string"
-                        }
-                      ]
-                    }
+                  "type": 
+                  {
+                      "type": "array",
+                      "items": ["null", {
+                          "type": "record",
+                          "name": "Value",
+                          "fields": [{
+                              "name": "question_id",
+                              "type":  "string",
+                              "doc": "The original field name was 'question-id' but some characters is not accepted in the field name of Avro record"
+                          }, {
+                              "name": "response_type",
+                              "type": ["null", "string"],
+                              "default": null
+                          }, {
+                              "name": "value",
+                              "type": "string"
+                              
+                          }]
+                      }]
                   }
-                }
-              ]
-            }
-          }
-        }
-      ]
+                 
+              }]
+          }]
+      }
+      
+  }, {
+      "name": "individual_id",
+      "type": "string"
+  }, {
+      "name": "source",
+      "type":  "string"
+  }, {
+      "name": "streamName",
+      "type": "string"
+  }, {
+      "name": "unit",
+      "type": ["null", "string"],
+      "default": null
+  }]
 }
