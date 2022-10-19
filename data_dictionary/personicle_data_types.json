@@ -26,6 +26,12 @@
                     "TableName": "heart_rate",
                     "base_schema": "integer_datastream_schema.avsc"
                 },
+                "com.personicle.individual.datastreams.heartrate.test": {
+                    "ValueType": "Integer",
+                    "Unit": "bpm",
+                    "TableName": "heart_rate",
+                    "base_schema": "integer_datastream_schema.avsc"
+                },
                 "com.personicle.individual.datastreams.heart_intensity_minutes": {
                     "ValueType": "Numeric",
                     "Unit": "minutes",
