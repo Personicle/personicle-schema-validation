@@ -39,7 +39,7 @@
                       "type": "record",
                       "fields":[
                         {
-                          "name": "question-id",
+                          "name": "question_id",
                           "type": "string"
                         },
                         {
